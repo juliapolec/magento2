@@ -10,6 +10,7 @@
     use Symfony\Component\Console\Output\OutputInterface;
     use Magento\Framework\Filesystem\Driver\File;
     use Magento\Framework\Module\Dir\Reader;
+    use Magento\Framework\Serialize\Serializer\Json;
 
 
     class ExampleCommand extends Command
@@ -38,13 +39,16 @@
 
         protected $reader;
         protected $file;
+        protected $json;
         protected $fileName = null;
 
 
         public function __construct(
 
+            Json          $json,
             Reader        $reader,
             File          $file
+
 
         )
 
@@ -52,6 +56,7 @@
             parent::__construct();
             $this->reader = $reader;
             $this->file = $file;
+            $this->json = $json;
 
         }
 
@@ -65,18 +70,20 @@
 
                 $PathDirectory = $this->reader->getModuleDir(
                     \Magento\Framework\Module\Dir::MODULE_ETC_DIR,
-                    'Academy_TurboModule');
-                $FullPathDirectory = $PathDirectory. '/'. $fileName;
+                    'Academy_ConsoleExample'). '/'. $fileName;
+                $JsonPath = $this->file->fileGetContents($PathDirectory);
+                $product = $this->json->unserialize($JsonPath);
 
-                $output->writeln( $fileName );
-                $output->writeln( $FullPathDirectory );
-//                $output->writeln($this->file->fileGetContents($PathDirectory));
+//                $output->writeln( $fileName );
+//                $output->writeln( $PathDirectory );
 
-                if($this->file->isExists($FullPathDirectory)){
-                    $output->writeln("exist ". $fileName);
-                    $output->writeln($this->file->fileGetContents($FullPathDirectory));
+
+                if($this->file->isExists($PathDirectory)){
+                    $output->writeln("<info>exist </info>". $fileName);
+//                    $output->writeln($this->file->fileGetContents($PathDirectory));
+                    $output->writeln($product['product']);
                 } else{
-                    $output->writeln("not found");
+                    $output->writeln("<error>not found</error>");
                 }
 
         }
