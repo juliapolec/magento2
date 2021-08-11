@@ -17,12 +17,9 @@
     {
         const FILE = 'file';
         const SERIALIZED = 'serialized';
-//                    public const FILE_NAME_ARGUMENT = 'file';
-//                    public const IMPORT_DIR = '/import/';
 
 
         protected function configure()
-
         {
 
             parent::configure();
@@ -59,7 +56,6 @@
             Reader        $reader,
             File          $file
 
-
         )
 
         {
@@ -74,6 +70,7 @@
         /**
          * @throws \Magento\Framework\Exception\FileSystemException
          */
+
         protected function execute(InputInterface $input, OutputInterface $output)
         {
                 $fileName = $input->getOption(self::FILE);
@@ -88,10 +85,13 @@
 //                $output->writeln( $PathDirectory );
 
 
-                if($this->file->isExists($PathDirectory)){
+                if($this->file->isExists($PathDirectory))
+                {
                     $output->writeln("<info>exist </info>". $fileName);
 //                    $output->writeln($this->file->fileGetContents($PathDirectory));
-                    $output->writeln($product['product']);
+//                    $output->writeln($product['product']);
+                    $output->writeln(print_r(array_values($product['product'])));
+
                 } else{
                     $output->writeln("<error>not found</error>");
                 }
@@ -103,8 +103,7 @@
                 }
                 else{
                     $output->writeln('no access');
-
-        }
+                }
         }
     }
 //        formatted text
