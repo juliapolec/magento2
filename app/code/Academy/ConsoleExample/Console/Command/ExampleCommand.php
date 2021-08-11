@@ -16,8 +16,11 @@
     class ExampleCommand extends Command
     {
         const FILE = 'file';
+        const SERIALIZED = 'serialized';
 //                    public const FILE_NAME_ARGUMENT = 'file';
 //                    public const IMPORT_DIR = '/import/';
+
+
         protected function configure()
 
         {
@@ -33,6 +36,13 @@
                 InputOption::VALUE_REQUIRED,
                 'file'
             );
+            $this->addOption(
+                self::SERIALIZED,
+                null,
+                InputOption::VALUE_NONE,
+                'serialized'
+            );
+
             parent::configure();
         }
 
@@ -86,6 +96,15 @@
                     $output->writeln("<error>not found</error>");
                 }
 
+
+                $serialized = $input->getOption(self::SERIALIZED);
+                if($serialized == true){
+                    $output->writeln('success');
+                }
+                else{
+                    $output->writeln('no access');
+
+        }
         }
     }
 //        formatted text
