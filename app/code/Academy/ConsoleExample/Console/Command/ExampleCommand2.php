@@ -91,7 +91,7 @@ use \Magento\Framework\App\Area;
         $product = $this->productFactory->create();
 
         try{
-            
+
         $product->setName('Test Product');
         $product->setTypeId('simple');
         $product->setAttributeSetId(4);
