@@ -5,6 +5,7 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="example" xsi:type="object">Academy\ConsoleExample\Console\Command\ExampleCommand</item>
+                <item name="example2" xsi:type="object">Academy\ConsoleExample\Console\Command\ExampleCommand2</item>
             </argument>
         </arguments>
     </type>

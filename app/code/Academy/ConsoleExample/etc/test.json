@@ -2,7 +2,7 @@
   "product": {
     "sku": "TEST-001",
     "name": "Test product 1",
-    "attribute_set_id": 9,
+    "attribute_set_id": 4,
     "price": 25,
     "status": 1,
     "visibility": 1,
