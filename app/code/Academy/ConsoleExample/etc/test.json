@@ -5,8 +5,34 @@
     "attribute_set_id": 4,
     "price": 25,
     "status": 1,
-    "visibility": 1,
+    "visibility": 4,
     "type_id": "simple",
-    "weight": "0.5"
+    "weight": "0.5",
+    "image": "/var/www/html/pub/media/catalog/product/m/b/1.jpeg"
+  },
+
+  "product2": {
+    "sku": "TEST-002",
+    "name": "Test product 2",
+    "attribute_set_id": 4,
+    "price": 28,
+    "status": 1,
+    "visibility": 4,
+    "type_id": "simple",
+    "weight": "0.7",
+    "image": "/var/www/html/pub/media/catalog/product/m/b/2.jpeg"
+  },
+
+  "product3": {
+    "sku": "TEST-003",
+    "name": "Test product 3",
+    "attribute_set_id": 4,
+    "price": 100,
+    "status": 1,
+    "visibility": 4,
+    "type_id": "simple",
+    "weight": "0.8",
+    "image": "/var/www/html/pub/media/catalog/product/m/b/3.jpeg"
+
   }
 }

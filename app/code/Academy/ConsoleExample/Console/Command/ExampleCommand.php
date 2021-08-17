@@ -22,7 +22,6 @@
         protected function configure()
         {
 
-            parent::configure();
 
             $this->setName('academy:example:command');
             $this->setDescription('Academy training console example.');
