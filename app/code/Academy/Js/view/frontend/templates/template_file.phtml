@@ -1,0 +1,50 @@
+<fieldset class="fieldset">
+    <div class="field required">
+        <label class="label"
+               for="json_out"><span><?php echo $block->escapeHtml(__('Output')) ?></span></label>
+        <div class="input-box control">
+            <input name="json_out" id="json_out" title="<?php echo $block->escapeHtml(__('Output')) ?>"
+                   value="" class="input-text required-entry" type="text">
+        </div>
+    </div>
+    <div class="field">
+        <div class="primary">
+            <button type="submit" class="action submit primary btn_put_json"><span>Put Json Data</span></button>
+        </div>
+    </div>
+</fieldset>
+<script>
+    require(
+        [
+            'jquery'
+        ],
+        function (
+            $
+        ) {
+            $('body').on('click', '.btn_put_json', function () {
+
+                var self = $(this);
+                var url = "<?php echo $block->getUrl() . 'module/index/ReturnJson' ?>";
+                try {
+
+                    $.ajax({
+                        url: url,
+                        type: 'POST',
+                        dataType: 'json',
+                        showLoader: true,
+                        success: function (data) {
+                            $("#json_out").val(data.json_data);
+                        }
+                    });
+                } catch (e) {
+                }
+
+            });
+        });
+
+</script>
+
+
+<!--<div data-mage-init='{"hello": {"message": "HELLO WORLD!"}}'>-->
+<!--    Content!-->
+<!--</div>-->
