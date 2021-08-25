@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
         <route id="module" frontName="module">
-            <module name="Academy_Js"/>
+            <module name="Academy_CollapsibleWidget"/>
         </route>
     </router>
 </config>

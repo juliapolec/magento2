@@ -24,7 +24,7 @@
             $('body').on('click', '.btn_put_json', function () {
 
                 var self = $(this);
-                var url = "<?php echo $block->getUrl() . 'module/index/ReturnJson' ?>";
+                var url = "<?php echo $block->getUrl() . 'CollapsibleWidget/index/ReturnJson' ?>";
                 try {
 
                     $.ajax({
@@ -43,8 +43,3 @@
         });
 
 </script>
-
-
-<!--<div data-mage-init='{"hello": {"message": "HELLO WORLD!"}}'>-->
-<!--    Content!-->
-<!--</div>-->

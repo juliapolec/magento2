@@ -1,6 +1,6 @@
 <?php
 
-namespace Academy\Js\Controller\Index;
+namespace Academy\CollapsibleWidget\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -8,7 +8,6 @@ use Magento\Framework\Controller\Result\JsonFactory;
 
 class ReturnJson extends Action
 {
-
     private $resultJsonFactory;
 
     public function __construct(JsonFactory $resultJsonFactory, Context $context)

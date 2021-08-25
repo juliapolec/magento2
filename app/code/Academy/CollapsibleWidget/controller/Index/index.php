@@ -1,6 +1,6 @@
 <?php
 
-namespace Academy\Js\Controller\Index;
+namespace Academy\CollapsibleWidget\Controller\Index;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
