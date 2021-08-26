@@ -1,6 +1,6 @@
 <?php
 
-namespace Mageplaza\HelloWorld\Observer\Product;
+namespace Academy\EventExample\Observer;
 
 class ChangeDisplayText implements \Magento\Framework\Event\ObserverInterface
 {
