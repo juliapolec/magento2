@@ -46,8 +46,10 @@ class View extends \Magento\Framework\App\Action\Action
     {
         $result = $this->resultJsonFactory->create();
         $data = ['message' => 'Hello world!'];
+        $this->_eventManager->dispatch('academy_eventExample_display_text', ['mp_text' => $data]);
+        echo $data->getText();
 
-        return $result->setData($data);
+
     }
 
 }

@@ -1,12 +1,17 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
 
-    <event name="academy_eventExample_display_text">
-        <observer name="mp_display_text" instance="Academy\EventExample\Observer\ChangeDisplayText" />
-    </event>
+<!--    <event name="academy_eventExample_display_text">-->
+<!--        <observer name="mp_display_text" instance="Academy\EventExample\Observer\ChangeDisplayText" />-->
+<!--    </event>-->
 
     <event name="checkout_cart_product_add_after">
     <observer name="customPrice" instance="Academy\EventExample\Observer\Product\CustomPrice" />
     </event>
+
+    <event name="academy_eventExample_display_text">
+        <observer name="mp_display_text" instance="Academy\EventExample\Observer\DisplayText" />
+    </event>
+
 
 </config>
