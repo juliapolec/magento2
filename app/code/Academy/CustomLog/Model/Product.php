@@ -4,7 +4,7 @@ namespace Academy\CustomLog\Model;
 
 class Product extends \Magento\Catalog\Model\Product
 {
-    public function getName(): string
+    public function getName()
     {
         return "Video";
     }
