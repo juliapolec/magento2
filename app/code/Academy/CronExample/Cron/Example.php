@@ -7,6 +7,8 @@ use Psr\Log\LoggerInterface;
 
     class Example
 {
+    protected $logger;
+
     public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
@@ -14,8 +16,7 @@ use Psr\Log\LoggerInterface;
 
     public function execute()
     {
-        $this->logger->info('cron example start');
-        sleep(2);
-        $this->logger->info('croon example stop');
+        $this->logger->info('cron example works');
+
     }
 }
