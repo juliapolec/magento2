@@ -6,6 +6,6 @@ class Product extends \Magento\Catalog\Model\Product
 {
     public function getName()
     {
-        return "Video";
+//        return "Video";
     }
 }

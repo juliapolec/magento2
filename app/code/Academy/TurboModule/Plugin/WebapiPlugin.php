@@ -14,7 +14,7 @@ class WebapiPlugin
     ): void
     {
 
-        $product->setPrice(222);
+//        $product->setPrice(222);
 
     }
 }

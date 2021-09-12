@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+	<template id="email_test" label="Email Template" file="email_test.html" type="html" module="Academy_SuperModule" area="adminhtml"/>
+	<template id="new_email" label="New Email" file="new_email.html" type="html" module="Academy_SuperModule" area="adminhtml"/>
+</config>
