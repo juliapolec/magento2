@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Academy\IpTask\Api\IpAddressRepositoryInterface" type="Academy\IpTask\Model\IpAddressRepository"/>
+	<preference for="Academy\IpTask\Api\Data\IpAddressInterface" type="Academy\IpTask\Model\Data\IpAddress"/>
+	<preference for="Academy\IpTask\Api\Data\IpAddressSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+</config>

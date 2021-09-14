@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="academy_ip_ipaddress" resource="default" engine="innodb" comment="academy_ip_ipaddress Table">
+		<column xsi:type="smallint" name="ipaddress_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="ipaddress_id"/>
+		</constraint>
+		<column name="current_ip_adddress" nullable="true" xsi:type="text" comment="Current IP address"/>
+	</table>
+</schema>
