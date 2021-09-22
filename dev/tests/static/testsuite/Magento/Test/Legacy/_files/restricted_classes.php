@@ -216,7 +216,7 @@ return [
             [
                 'type' => 'library',
                 'name' => 'magento/framework',
-                'path' => 'Indexer/Action/ErrorHandler.php'
+                'path' => 'Indexer/Action/Base.php'
             ]
         ]
     ],
