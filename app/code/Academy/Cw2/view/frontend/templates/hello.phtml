@@ -1,0 +1,9 @@
+<?php
+$product = $block->getCurrentProduc();
+$specjalPrice = $product->getSpecjalPrice();
+?>
+<?php if ($specjalPrice !== null): ?>
+    <div class="product-specjal-price-info">
+        <a>Promocja trwa jeszcze 7 dni!</a>
+    </div>
+<?php endif; ?>
